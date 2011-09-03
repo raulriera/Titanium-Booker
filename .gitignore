@@ -2,3 +2,4 @@ tmp
 .project
 .DS_Store
 build/
+.settings
