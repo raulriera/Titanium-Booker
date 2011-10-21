@@ -6,7 +6,7 @@ var ui = {
 };
 
 var events = {
-	// Fired when a page is pages (swipted left or right)
+	// Fired when a page is pages (swiped left or right)
 	pageChanged: function() {
 		
 	}
