@@ -19,19 +19,19 @@ ui.home.book = Titanium.UI.createScrollableView({showPagingControl: false});
 
 ui.home.init = function() {	
 	// Read the "book" repository
-	var bookRepository = Titanium.Filesystem.getFile("../book").getDirectoryListing();
+	var bookRepository = Titanium.Filesystem.getFile("book").getDirectoryListing();
 	var bookPages = [];
 	
 	// Go through all the files in the repository
 	for (var file in bookRepository) {
 		// Only load .html files
 		if (bookRepository[file].split(".")[1] === "html") {
-			bookPages.push(Titanium.UI.createWebView({ url: "../book/" + bookRepository[file] }));
+			bookPages.push(Titanium.UI.createWebView({ url: "book/" + bookRepository[file] }));
 		}
 		
 		// Debug information
-		// Ti.API.info('file name = ' + bookRepository[file]);
-		// Ti.API.info("file extension = " + bookRepository[file].split(".")[1]);
+		Ti.API.info('file name = ' + bookRepository[file]);
+		Ti.API.info("file extension = " + bookRepository[file].split(".")[1]);
 	};
 	
 	ui.home.book.views = bookPages;
