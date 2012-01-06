@@ -30,7 +30,7 @@ ui.home.init = function() {
 		}
 		
 		// Debug information
-		Ti.API.info('file name = ' + bookRepository[file]);
+		Ti.API.info('file name = ' + bookRepository[file].split(".")[0]);
 		Ti.API.info("file extension = " + bookRepository[file].split(".")[1]);
 	};
 	
